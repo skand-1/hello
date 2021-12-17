@@ -1,0 +1,74 @@
+DFD symbols:-
+for basic symbol
+Process:-
+(1).Every process has a name that identifies the function it performs.
+(2).The name consists of a verb, followed by a singular noun.
+	Example:-
+	Apply payment
+	Canculate Comission
+	Verigy order
+Notation:-
+(1).A rounded rectagle represents a process
+(2).Processes are given id for easy referencing
+Data flow:-
+(1).A data-flow is a path for data to move from one part of the information system to another.
+Notation:-
+(1).Straight line with incoming arrows are input data flow
+(2).Straight line with outgoing arrows are output data flow
+Note:-
+Because every process changes data from one form into another, at least one data-flow must enter and one data-flow must exit each process symbol.
+Rules of dataflow:-
+(1).An entity cannot provide data to another entity without some processing occurred.
+(2).Data cannot move directly from an entity to a data story without being processed.
+(3).Data cannot move directly from a data store without being processed
+(4).Data cannot move directly from one data store to another without being processed.
+Other frequently-made mistakes in DFD:-
+(1).black holes:-A processing step may have input flows but no output flows.
+(2).Miracles:-A processing step may have output flows but no input flows.
+(3).Grey holes:-A processing step may have output that are grater than input flows
+Data store:-
+(1)A data store or data repository is used in a data-flow diagram to represent a situation when the system must retain data because one or more processes need to use the stored data in a later time.
+Notation:-
+(1).Data can be written into data store, it depicted by outgoing arrow
+(2).Data can be read from data store, it depicted by incoming arrow
+Note:-
+(1).Data store must be connected to process with data flow.
+(2).Each data store must have at least one input data-flow and at least one output data-flow (even if the output data-flow is a control or confirmation message).
+External entity:-
+Note:-
+(1).External entity also called as terminatior because they are data origins or final destinaion
+(2).External entity must connected to process with dataflow
+Balancing DFD:-
+When performing top-down decomposition to a DFD to lower level DFDs, the inputs and outputs must be conserved between levels of DFDs. For example, level n & n+1 must have the same inputs and outputs
+Guideline for Developing Data-Flow Diagram:-
+
+context diagram:-
+Guideline for Developing Data-Flow Diagram
+The context diagram must fit in one page.
+The process name in the context diagram should be the name of the information system.
+For example, Grading System, Order Processing System, Registration System.
+The context level diagram gets the number 0 (level zero).
+Unique Name for Levels:-
+Use unique names within each set of symbols.
+For example, there can be only one entity CUSTOMER in all levels of the data-flow diagrams; or here can be only one process named CALCULATE OVERTIME among all levels of data-flow diagrams
+No cross line in dfd:-
+One way to achieve this is to restrict the number of processes in a data-flow diagram.
+Right Complexity for Human Mind - 7 + / - 2 Symbols:-
+On lower-level data-flow diagrams with multiple processes, one should not have more than nine process symbols.
+Another way to avoid crossing lines is to duplicate an external entity or data store. Use a special notation such as an asterisk, to denote the duplicate symbol.
+Numbering Convention:-
+Use a unique reference number for each process symbol.
+Other process numbers are in the hierarchy of:-
+(1, 2, 3,...);
+(1.1, 1.2, 1.3, ..., 2.1, 2.2, 2.3,...);
+(1.1.1, 1.1.2, 1.1.3,...).
+Context-level diagram:-
+A context diagram gives an overview and it is the highest level in a data flow diagram, containing only one process representing the entire system. It should be split into major processes which give greater detail and each major process may further split to give more detail.
+All external entities are shown on the context diagram as well as major data flow to and from them.
+The diagram does not contain any data storage.
+The single process in the context-level diagram, representing the entire system, can be exploded to include the major processes of the system in the next level diagram, which is termed as diagram 0.
+Level 1 diagram:-
+Processes in diagram 0 (with a whole number) can be exploded further to represent details of the processing activities. Example below shows the next level ((Diagram 1) of process explosion.
+Although the following level 1 DFD only has three processes, there are quite a few input and input from the processes to the external entities and that could end up to be a few cross lines among them in the diagram; to avoid this problem, we could use (master and auxiliary view) multiple views of the same external entity in the DFD.
+Level 2 diagram:-
+If a process with a lot of data flow linking between a few external entities, we could first extract that particular process and the associated external entities into a separate diagram similar to a context diagram, before you refine the process into a separate level of DFD; and by this way you can ensure the consistency between them much easier.
